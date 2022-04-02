@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+:root
+{
+    --clr: #222327;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222327;
+}
+.navi
+{
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.navi ul
+{
+    display: flex;
+    width: 350px;
+}
+.navi ul li
+{
+    position: relative;
+    list-style:none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navi ul li a
+{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ width: 100%;
+ text-align: center;
+ font-weight: 500;   
+}
+.navi ul li a .icon
+{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5cm;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--clr);
+}
+.navi ul li:active .icon
+{
+    transform: translateY(-32px);
+}
+.navi ul li a .text
+{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75cm;
+    letter-spacing: 0.05cm;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translatey(20px);
+}
+.navi ul li:active a .text
+{
+    opacity: 1;
+    transform: translateY(-32px);
+}
+.indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #29fd53;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+}
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px-10px 0 0 var(--clr);
+
+}
+.indicator::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0px-10px 0 0 var(--clr);
+
+}
